@@ -37,19 +37,17 @@ class CreateNoteFragment : Fragment() {
 
         binding.button.setOnClickListener {
 
-            val titleView = binding.title // !!! val text = binding.title.text.toString()
-            val title = titleView.text.toString()
-            val textView = binding.text
-            val text = textView.text.toString()
+            val title = binding.title.text.toString()
+            val text = binding.text.text.toString()
             val date = Date(System.currentTimeMillis())
             val important = binding.checkBox.isChecked
 
             if (title.isBlank()) {
-                titleView.error = EMPTY_TITLE // !!! binding.title.error
+                binding.title.error = EMPTY_TITLE
             }
 
             if (text.isBlank()) {
-                textView.error = EMPTY_TEXT
+                binding.text.error = EMPTY_TEXT
             }
 
             if (!title.isBlank() && !text.isBlank()) {
@@ -62,8 +60,8 @@ class CreateNoteFragment : Fragment() {
                 setFragmentResult(REQUEST_KEY, bundle)
                 listener?.onNoteCreated()
 
-                titleView.text = null
-                textView.text = null
+                binding.title.text = null
+                binding.text.text = null
                 binding.checkBox.isChecked = false
             }
         }
