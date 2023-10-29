@@ -6,9 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.AppCompatButton
-import androidx.appcompat.widget.AppCompatCheckBox
-import androidx.appcompat.widget.AppCompatEditText
 import androidx.fragment.app.setFragmentResult
 import com.example.tms_an_15_homework_lesson_22.databinding.FragmentCreateNoteBinding
 import java.util.Date
